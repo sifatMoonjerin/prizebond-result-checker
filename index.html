@@ -19,25 +19,17 @@
     <input type="file" id="selectedFile" accept=".xlsx" name="file" style="display: none;" />
     <button type="button" id="fileUploadButton" class="btn btn-success btn-lg">Upload File</button>
   </div>
+
+  <div class="loader hide-content" id="loadingBlock"></div>
   
   <div class="result-zone hide-content" id="resultBlock">
     <h3 id="resultMessage"></h3>
-    <table id="resultTable" class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">Number</th>
-          <th scope="col">Draw</th>
-          <th scope="col">Prize</th>
-          <th scope="col">Amount</th>
-        </tr>
-      </thead>
-
-      <tbody id="resultTableBody">
-
-      </tbody>
+    <table id="resultTable" class="table table-bordered"> 
     </table>
     <button type="button" id="resetButton" class="btn btn-primary btn-lg">Reset</button>
   </div>
+
+  <a href="https://github.com/sifatMoonjerin/prizebond-result-checker" class="dev-link" target="_blank">&#169; Sifat Moonjerin</a>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
   <script src="./main.js"></script>
 </body>

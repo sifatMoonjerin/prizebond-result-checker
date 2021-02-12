@@ -63,8 +63,11 @@ function fetchData(arr) {
 }
 
 async function getResults(arr) {
+  const loader = document.getElementById('loadingBlock');
+  uploadBlock.classList.add('hide-content');
+  loader.classList.remove('hide-content');
   const resultArr = await Promise.all(arr.map(a => fetchData(a)))
-  console.log(resultArr)
+  loader.classList.add('hide-content');
   return resultArr.flat();
 }
 
@@ -76,12 +79,14 @@ function buildTable(data) {
   table.innerHTML = '';
   if (data.length > 0) {
     table.innerHTML += `
-    <tr>
-      <th scope="col">Number</th>
-      <th scope="col">Draw</th>
-      <th scope="col">Prize</th>
-      <th scope="col">Amount</th>
-    </tr>`;
+    <thead>
+      <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Draw</th>
+        <th scope="col">Prize</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>`;
 
     data.forEach(d => {
       const row = `
@@ -100,7 +105,6 @@ function buildTable(data) {
 }
 
 function displayResult(data) {
-  uploadBlock.classList.add('hide-content');
   resultBlock.classList.remove('hide-content');
   const message = document.getElementById('resultMessage');
   message.innerText = data.length > 0 ? 'Congratulations!!!' : 'Sorry! Better luck next time!';
