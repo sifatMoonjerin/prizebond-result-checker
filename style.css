@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 100px;
+}
+
+p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.upload-zone, .result-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin-top: 10px;
+}
+
+.hide-content {
+  display: none;
+}
+

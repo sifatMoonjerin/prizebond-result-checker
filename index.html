@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Prize Bond Result Checker</title>
+</head>
+<body>
+  <h1>Prize Bond Result Checker</h1>
+  <div class="upload-zone" id="uploadBlock">
+    <p>Upload an excel file containing your prize bond numbers
+      <a href="./assets/template.xlsx" download>
+        Download Template
+      </a>
+    </p>
+    <input type="file" id="selectedFile" accept=".xlsx" name="file" style="display: none;" />
+    <button type="button" id="fileUploadButton" class="btn btn-success btn-lg">Upload File</button>
+  </div>
+  
+  <div class="result-zone hide-content" id="resultBlock">
+    <h3 id="resultMessage"></h3>
+    <table id="resultTable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Number</th>
+          <th scope="col">Draw</th>
+          <th scope="col">Prize</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+
+      <tbody id="resultTableBody">
+
+      </tbody>
+    </table>
+    <button type="button" id="resetButton" class="btn btn-primary btn-lg">Reset</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+
+<head>
+  <title>Drag and Drop File Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="./src/main.css">
+</head>
+
+<body>
+  <div class="drop-zone">
+    <span class="drop-zone__prompt">Drop file here or click to upload</span>
+    <input type="file" name="myFile" accept=".xlsx, .xls" class="drop-zone__input">
+  </div>
+
+  <script src="./src/main.js"></script>
+</body> -->
